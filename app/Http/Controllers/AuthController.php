@@ -31,11 +31,4 @@ class AuthController extends Controller
         return redirect()->route('auth-login');
 
     }
-    public function agregarUsuario() {
-        $item = new User();
-        $item->name = 'cliente';
-        $item->password = Hash::make('12345');
-        $item->save();
-        return $item;
-    }
 }
